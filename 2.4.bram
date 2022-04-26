@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bram>
+  <program>Aris</program>
+  <version>0.1.0</version>
+  <metadata>
+    <author>ARIS-YEW-UI</author>
+    <hash>lJf1WXN2V7cCm74ahiWM6VATLO64solzFILcNnbFwFM=</hash>
+  </metadata>
+  <proof id="0">
+    <assumption linenum="0">
+      <raw>(A → C)</raw>
+    </assumption>
+    <assumption linenum="1">
+      <raw>(A → B)</raw>
+    </assumption>
+    <step linenum="2">
+      <rule>SUBPROOF</rule>
+      <premise>1</premise>
+    </step>
+    <step linenum="6">
+      <raw>(A → (B ∧ C))</raw>
+      <rule>CONDITIONAL_PROOF</rule>
+      <premise>2</premise>
+    </step>
+  </proof>
+  <proof id="1">
+    <assumption linenum="2">
+      <raw>A</raw>
+    </assumption>
+    <step linenum="3">
+      <raw>B</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>1</premise>
+      <premise>2</premise>
+    </step>
+    <step linenum="4">
+      <raw>C</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>2</premise>
+      <premise>0</premise>
+    </step>
+    <step linenum="5">
+      <raw>(B ∧ C)</raw>
+      <rule>CONJUNCTION</rule>
+      <premise>3</premise>
+      <premise>4</premise>
+    </step>
+  </proof>
+</bram>

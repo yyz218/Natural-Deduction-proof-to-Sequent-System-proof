@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bram>
+  <program>Aris</program>
+  <version>0.1.0</version>
+  <metadata>
+    <author>ARIS-YEW-UI</author>
+    <hash>wwPylvS9b20xUKd7NLgJmBRpa43i0OSnA7fOCRpNMYo=</hash>
+  </metadata>
+  <proof id="0">
+    <assumption linenum="0">
+      <raw>(A → D)</raw>
+    </assumption>
+    <assumption linenum="1">
+      <raw>(D → C)</raw>
+    </assumption>
+    <assumption linenum="2">
+      <raw>(A ∨ (B ∧ C))</raw>
+    </assumption>
+    <step linenum="3">
+      <rule>SUBPROOF</rule>
+      <premise>1</premise>
+    </step>
+    <step linenum="6">
+      <rule>SUBPROOF</rule>
+      <premise>2</premise>
+    </step>
+    <step linenum="8">
+      <raw>C</raw>
+      <rule>DISJUNCTIVE_ELIMINATION</rule>
+      <premise>2</premise>
+      <premise>3</premise>
+      <premise>6</premise>
+    </step>
+  </proof>
+  <proof id="2">
+    <assumption linenum="6">
+      <raw>(B ∧ C)</raw>
+    </assumption>
+    <step linenum="7">
+      <raw>C</raw>
+      <rule>SIMPLIFICATION</rule>
+      <premise>6</premise>
+    </step>
+  </proof>
+  <proof id="1">
+    <assumption linenum="3">
+      <raw>A</raw>
+    </assumption>
+    <step linenum="4">
+      <raw>D</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>3</premise>
+      <premise>0</premise>
+    </step>
+    <step linenum="5">
+      <raw>C</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>1</premise>
+      <premise>4</premise>
+    </step>
+  </proof>
+</bram>
