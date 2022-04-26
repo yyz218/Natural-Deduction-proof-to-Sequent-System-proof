@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bram>
+  <program>Aris</program>
+  <version>0.1.0</version>
+  <metadata>
+    <author>ARIS-YEW-UI</author>
+    <hash>KHzQo+rweM6BsXbxuNAYUeh30O19tXR5iehFH53fSs0=</hash>
+  </metadata>
+  <proof id="0">
+    <assumption linenum="0">
+      <raw>(B → (D ∨ F))</raw>
+    </assumption>
+    <assumption linenum="1">
+      <raw>(A → (D ∨ E))</raw>
+    </assumption>
+    <assumption linenum="2">
+      <raw>(A ∧ (B ∧ C))</raw>
+    </assumption>
+    <step linenum="3">
+      <raw>A</raw>
+      <rule>SIMPLIFICATION</rule>
+      <premise>2</premise>
+    </step>
+    <step linenum="4">
+      <raw>(B ∧ C)</raw>
+      <rule>SIMPLIFICATION</rule>
+      <premise>2</premise>
+    </step>
+    <step linenum="5">
+      <raw>B</raw>
+      <rule>SIMPLIFICATION</rule>
+      <premise>4</premise>
+    </step>
+    <step linenum="6">
+      <raw>(D ∨ E)</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>1</premise>
+      <premise>3</premise>
+    </step>
+    <step linenum="7">
+      <rule>SUBPROOF</rule>
+      <premise>1</premise>
+    </step>
+    <step linenum="9">
+      <rule>SUBPROOF</rule>
+      <premise>2</premise>
+    </step>
+    <step linenum="17">
+      <raw>(D ∨ (E ∧ F))</raw>
+      <rule>DISJUNCTIVE_ELIMINATION</rule>
+      <premise>6</premise>
+      <premise>7</premise>
+      <premise>9</premise>
+    </step>
+  </proof>
+  <proof id="2">
+    <assumption linenum="9">
+      <raw>E</raw>
+    </assumption>
+    <step linenum="10">
+      <raw>(D ∨ F)</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>0</premise>
+      <premise>5</premise>
+    </step>
+    <step linenum="11">
+      <rule>SUBPROOF</rule>
+      <premise>3</premise>
+    </step>
+    <step linenum="13">
+      <rule>SUBPROOF</rule>
+      <premise>4</premise>
+    </step>
+    <step linenum="16">
+      <raw>(D ∨ (E ∧ F))</raw>
+      <rule>DISJUNCTIVE_ELIMINATION</rule>
+      <premise>10</premise>
+      <premise>11</premise>
+      <premise>13</premise>
+    </step>
+  </proof>
+  <proof id="4">
+    <assumption linenum="13">
+      <raw>F</raw>
+    </assumption>
+    <step linenum="14">
+      <raw>(E ∧ F)</raw>
+      <rule>CONJUNCTION</rule>
+      <premise>9</premise>
+      <premise>13</premise>
+    </step>
+    <step linenum="15">
+      <raw>(D ∨ (E ∧ F))</raw>
+      <rule>ADDITION</rule>
+      <premise>14</premise>
+    </step>
+  </proof>
+  <proof id="3">
+    <assumption linenum="11">
+      <raw>D</raw>
+    </assumption>
+    <step linenum="12">
+      <raw>(D ∨ (E ∧ F))</raw>
+      <rule>ADDITION</rule>
+      <premise>11</premise>
+    </step>
+  </proof>
+  <proof id="1">
+    <assumption linenum="7">
+      <raw>D</raw>
+    </assumption>
+    <step linenum="8">
+      <raw>(D ∨ (E ∧ F))</raw>
+      <rule>ADDITION</rule>
+      <premise>7</premise>
+    </step>
+  </proof>
+</bram>

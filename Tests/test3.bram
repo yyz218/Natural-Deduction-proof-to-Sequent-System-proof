@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bram>
+  <program>Aris</program>
+  <version>0.1.0</version>
+  <metadata>
+    <author>ARIS-YEW-UI</author>
+    <hash>dATkvrTUjeSydzTarAtlRGpDFG99uHtASIZcIyiHMw0=</hash>
+  </metadata>
+  <proof id="0">
+    <assumption linenum="0">
+      <raw>((A ∧ B) → C)</raw>
+    </assumption>
+    <assumption linenum="1">
+      <raw>B</raw>
+    </assumption>
+    <assumption linenum="2">
+      <raw>(¬A → C)</raw>
+    </assumption>
+    <step linenum="3">
+      <rule>SUBPROOF</rule>
+      <premise>1</premise>
+    </step>
+    <step linenum="10">
+      <raw>¬¬(A ∨ ¬A)</raw>
+      <rule>PROOF_BY_CONTRADICTION</rule>
+      <premise>3</premise>
+    </step>
+    <step linenum="11">
+      <raw>(A ∨ ¬A)</raw>
+      <rule>DOUBLENEGATION</rule>
+      <premise>10</premise>
+    </step>
+    <step linenum="12">
+      <rule>SUBPROOF</rule>
+      <premise>2</premise>
+    </step>
+    <step linenum="15">
+      <rule>SUBPROOF</rule>
+      <premise>3</premise>
+    </step>
+    <step linenum="17">
+      <raw>C</raw>
+      <rule>DISJUNCTIVE_ELIMINATION</rule>
+      <premise>11</premise>
+      <premise>12</premise>
+      <premise>15</premise>
+    </step>
+  </proof>
+  <proof id="3">
+    <assumption linenum="15">
+      <raw>¬A</raw>
+    </assumption>
+    <step linenum="16">
+      <raw>C</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>2</premise>
+      <premise>15</premise>
+    </step>
+  </proof>
+  <proof id="2">
+    <assumption linenum="12">
+      <raw>A</raw>
+    </assumption>
+    <step linenum="13">
+      <raw>(A ∧ B)</raw>
+      <rule>CONJUNCTION</rule>
+      <premise>1</premise>
+      <premise>12</premise>
+    </step>
+    <step linenum="14">
+      <raw>C</raw>
+      <rule>MODUS_PONENS</rule>
+      <premise>0</premise>
+      <premise>13</premise>
+    </step>
+  </proof>
+  <proof id="1">
+    <assumption linenum="3">
+      <raw>¬(A ∨ ¬A)</raw>
+    </assumption>
+    <step linenum="4">
+      <rule>SUBPROOF</rule>
+      <premise>4</premise>
+    </step>
+    <step linenum="7">
+      <raw>¬A</raw>
+      <rule>PROOF_BY_CONTRADICTION</rule>
+      <premise>4</premise>
+    </step>
+    <step linenum="8">
+      <raw>(A ∨ ¬A)</raw>
+      <rule>ADDITION</rule>
+      <premise>7</premise>
+    </step>
+    <step linenum="9">
+      <raw>⊥</raw>
+      <rule>CONTRADICTION</rule>
+      <premise>3</premise>
+      <premise>8</premise>
+    </step>
+  </proof>
+  <proof id="4">
+    <assumption linenum="4">
+      <raw>A</raw>
+    </assumption>
+    <step linenum="5">
+      <raw>(A ∨ ¬A)</raw>
+      <rule>ADDITION</rule>
+      <premise>4</premise>
+    </step>
+    <step linenum="6">
+      <raw>⊥</raw>
+      <rule>CONTRADICTION</rule>
+      <premise>3</premise>
+      <premise>5</premise>
+    </step>
+  </proof>
+</bram>

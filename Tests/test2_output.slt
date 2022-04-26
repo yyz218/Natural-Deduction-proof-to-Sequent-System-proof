@@ -1,0 +1,249 @@
+(:DESCRIPTIONS
+ (
+   (:X
+   234
+   :Y
+   280
+   :ID
+   0
+   :NAME
+   ""
+   :FORMULA
+   "(if B  (or D  F))"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   154
+   :Y
+   395
+   :ID
+   1
+   :NAME
+   ""
+   :FORMULA
+   "(if A  (or D  E))"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   652
+   :Y
+   50
+   :ID
+   2
+   :NAME
+   ""
+   :FORMULA
+   "(and A  (and B  C))"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   353
+   :Y
+   395
+   :ID
+   3
+   :NAME
+   ""
+   :FORMULA
+   "A"
+   :JUSTIFICATION
+   LOGIC::AND-ELIM)
+   (:X
+   303
+   :Y
+   165
+   :ID
+   4
+   :NAME
+   ""
+   :FORMULA
+   "(and B  C)"
+   :JUSTIFICATION
+   LOGIC::AND-ELIM)
+   (:X
+   513
+   :Y
+   280
+   :ID
+   5
+   :NAME
+   ""
+   :FORMULA
+   "B"
+   :JUSTIFICATION
+   LOGIC::AND-ELIM)
+   (:X
+   303
+   :Y
+   510
+   :ID
+   6
+   :NAME
+   ""
+   :FORMULA
+   "(or D  E)"
+   :JUSTIFICATION
+   LOGIC::IF-ELIM)
+   (:X
+   552
+   :Y
+   395
+   :ID
+   7
+   :NAME
+   ""
+   :FORMULA
+   "D"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   651
+   :Y
+   510
+   :ID
+   8
+   :NAME
+   ""
+   :FORMULA
+   "(or D  (and E  F))"
+   :JUSTIFICATION
+   LOGIC::OR-INTRO)
+   (:X
+   651
+   :Y
+   165
+   :ID
+   9
+   :NAME
+   ""
+   :FORMULA
+   "E"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   751
+   :Y
+   395
+   :ID
+   10
+   :NAME
+   ""
+   :FORMULA
+   "(or D  F)"
+   :JUSTIFICATION
+   LOGIC::IF-ELIM)
+   (:X
+   792
+   :Y
+   280
+   :ID
+   11
+   :NAME
+   ""
+   :FORMULA
+   "D"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   950
+   :Y
+   395
+   :ID
+   12
+   :NAME
+   ""
+   :FORMULA
+   "(or D  (and E  F))"
+   :JUSTIFICATION
+   LOGIC::OR-INTRO)
+   (:X
+   999
+   :Y
+   165
+   :ID
+   13
+   :NAME
+   ""
+   :FORMULA
+   "F"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   1071
+   :Y
+   280
+   :ID
+   14
+   :NAME
+   ""
+   :FORMULA
+   "(and E  F)"
+   :JUSTIFICATION
+   LOGIC::AND-INTRO)
+   (:X
+   1149
+   :Y
+   395
+   :ID
+   15
+   :NAME
+   ""
+   :FORMULA
+   "(or D  (and E  F))"
+   :JUSTIFICATION
+   LOGIC::OR-INTRO)
+   (:X
+   999
+   :Y
+   510
+   :ID
+   16
+   :NAME
+   ""
+   :FORMULA
+   "(or D  (and E  F))"
+   :JUSTIFICATION
+   LOGIC::OR-ELIM)
+   (:X
+   652
+   :Y
+   625
+   :ID
+   17
+   :NAME
+   ""
+   :FORMULA
+   "(or D  (and E  F))"
+   :JUSTIFICATION
+   LOGIC::OR-ELIM))
+ :STRUCTURES
+ (
+(:CONCLUSION 0 :PREMISES NIL)
+(:CONCLUSION 1 :PREMISES NIL)
+(:CONCLUSION 2 :PREMISES NIL)
+(:CONCLUSION 3 :PREMISES (2))
+(:CONCLUSION 4 :PREMISES (2))
+(:CONCLUSION 5 :PREMISES (4))
+(:CONCLUSION 6 :PREMISES (1 3))
+(:CONCLUSION 7 :PREMISES NIL)
+(:CONCLUSION 8 :PREMISES (7))
+(:CONCLUSION 9 :PREMISES NIL)
+(:CONCLUSION 10 :PREMISES (0 5))
+(:CONCLUSION 11 :PREMISES NIL)
+(:CONCLUSION 12 :PREMISES (11))
+(:CONCLUSION 13 :PREMISES NIL)
+(:CONCLUSION 14 :PREMISES (9 13))
+(:CONCLUSION 15 :PREMISES (14))
+(:CONCLUSION 16 :PREMISES (10 12 15))
+(:CONCLUSION 17 :PREMISES (6 8 16)))
+ :INTERFACE
+ (:X
+  -10
+  :Y
+  0
+  :WIDTH
+  1540
+  :HEIGHT
+  1000
+  :PROOF-SYSTEM
+  LOGIC::PROPOSITIONAL-CALCULUS))

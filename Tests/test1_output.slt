@@ -1,0 +1,171 @@
+(:DESCRIPTIONS
+ (
+   (:X
+   420
+   :Y
+   395
+   :ID
+   0
+   :NAME
+   ""
+   :FORMULA
+   "(iff C  D)"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   792
+   :Y
+   50
+   :ID
+   1
+   :NAME
+   ""
+   :FORMULA
+   "(if (not C)  (not B))"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   234
+   :Y
+   50
+   :ID
+   2
+   :NAME
+   ""
+   :FORMULA
+   "(if A  B)"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   513
+   :Y
+   50
+   :ID
+   3
+   :NAME
+   ""
+   :FORMULA
+   "A"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   420
+   :Y
+   165
+   :ID
+   4
+   :NAME
+   ""
+   :FORMULA
+   "B"
+   :JUSTIFICATION
+   LOGIC::IF-ELIM)
+   (:X
+   1071
+   :Y
+   50
+   :ID
+   5
+   :NAME
+   ""
+   :FORMULA
+   "(not C)"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   885
+   :Y
+   165
+   :ID
+   6
+   :NAME
+   ""
+   :FORMULA
+   "(not B)"
+   :JUSTIFICATION
+   LOGIC::IF-ELIM)
+   (:X
+   420
+   :Y
+   280
+   :ID
+   8
+   :NAME
+   ""
+   :FORMULA
+   "(not (not C))"
+   :JUSTIFICATION
+   LOGIC::NOT-INTRO)
+   (:X
+   885
+   :Y
+   395
+   :ID
+   9
+   :NAME
+   ""
+   :FORMULA
+   "C"
+   :JUSTIFICATION
+   LOGIC::NOT-ELIM)
+   (:X
+   652
+   :Y
+   510
+   :ID
+   10
+   :NAME
+   ""
+   :FORMULA
+   "D"
+   :JUSTIFICATION
+   LOGIC::IFF-ELIM)
+   (:X
+   652
+   :Y
+   625
+   :ID
+   11
+   :NAME
+   ""
+   :FORMULA
+   "(if A  D)"
+   :JUSTIFICATION
+   LOGIC::IF-INTRO)
+   (:X
+   885
+   :Y
+   280
+   :ID
+   12
+   :NAME
+   ""
+   :FORMULA
+   "(not C)"
+   :JUSTIFICATION
+   LOGIC::ASSUME))
+ :STRUCTURES
+ (
+(:CONCLUSION 0 :PREMISES NIL)
+(:CONCLUSION 1 :PREMISES NIL)
+(:CONCLUSION 2 :PREMISES NIL)
+(:CONCLUSION 3 :PREMISES NIL)
+(:CONCLUSION 4 :PREMISES (2 3))
+(:CONCLUSION 5 :PREMISES NIL)
+(:CONCLUSION 6 :PREMISES (1 5))
+(:CONCLUSION 8 :PREMISES (4 6))
+(:CONCLUSION 9 :PREMISES (8 12))
+(:CONCLUSION 10 :PREMISES (0 9))
+(:CONCLUSION 11 :PREMISES (10))
+(:CONCLUSION 12 :PREMISES NIL))
+ :INTERFACE
+ (:X
+  -10
+  :Y
+  0
+  :WIDTH
+  1540
+  :HEIGHT
+  1000
+  :PROOF-SYSTEM
+  LOGIC::PROPOSITIONAL-CALCULUS))
