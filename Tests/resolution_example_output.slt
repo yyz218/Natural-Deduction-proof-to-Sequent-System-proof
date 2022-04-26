@@ -1,0 +1,261 @@
+(:DESCRIPTIONS
+ (
+   (:X
+   234
+   :Y
+   510
+   :ID
+   0
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  c)"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   552
+   :Y
+   395
+   :ID
+   1
+   :NAME
+   ""
+   :FORMULA
+   "(or b1  b2  (not c))"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   154
+   :Y
+   395
+   :ID
+   2
+   :NAME
+   ""
+   :FORMULA
+   "a1"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   513
+   :Y
+   510
+   :ID
+   3
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  b1  b2)"
+   :JUSTIFICATION
+   LOGIC::OR-INTRO)
+   (:X
+   353
+   :Y
+   395
+   :ID
+   4
+   :NAME
+   ""
+   :FORMULA
+   "a2"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   792
+   :Y
+   510
+   :ID
+   5
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  b1  b2)"
+   :JUSTIFICATION
+   LOGIC::OR-INTRO)
+   (:X
+   651
+   :Y
+   50
+   :ID
+   6
+   :NAME
+   ""
+   :FORMULA
+   "c"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   1071
+   :Y
+   280
+   :ID
+   7
+   :NAME
+   ""
+   :FORMULA
+   "b1"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   1149
+   :Y
+   395
+   :ID
+   8
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  b1  b2)"
+   :JUSTIFICATION
+   LOGIC::OR-INTRO)
+   (:X
+   234
+   :Y
+   280
+   :ID
+   9
+   :NAME
+   ""
+   :FORMULA
+   "b2"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   751
+   :Y
+   395
+   :ID
+   10
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  b1  b2)"
+   :JUSTIFICATION
+   LOGIC::OR-INTRO)
+   (:X
+   303
+   :Y
+   50
+   :ID
+   11
+   :NAME
+   ""
+   :FORMULA
+   "(not c)"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   950
+   :Y
+   395
+   :ID
+   13
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  b1  b2)"
+   :JUSTIFICATION
+   LOGIC::NOT-ELIM)
+   (:X
+   1071
+   :Y
+   510
+   :ID
+   14
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  b1  b2)"
+   :JUSTIFICATION
+   LOGIC::OR-ELIM)
+   (:X
+   652
+   :Y
+   625
+   :ID
+   15
+   :NAME
+   ""
+   :FORMULA
+   "(or a1  a2  b1  b2)"
+   :JUSTIFICATION
+   LOGIC::OR-ELIM)
+   (:X
+   999
+   :Y
+   50
+   :ID
+   16
+   :NAME
+   ""
+   :FORMULA
+   "(not (or a1  a2  b1  b2))"
+   :JUSTIFICATION
+   LOGIC::ASSUME)
+   (:X
+   652
+   :Y
+   165
+   :ID
+   17
+   :NAME
+   ""
+   :FORMULA
+   "(and  (not (or a1  a2  b1  b2))  (not c)  c )"
+   :JUSTIFICATION
+   LOGIC::AND-INTRO)
+   (:X
+   513
+   :Y
+   280
+   :ID
+   18
+   :NAME
+   ""
+   :FORMULA
+   "(not c)"
+   :JUSTIFICATION
+   LOGIC::AND-ELIM)
+   (:X
+   792 :Y
+   280
+   :ID
+   19
+   :NAME
+   ""
+   :FORMULA
+   "c"
+   :JUSTIFICATION
+   LOGIC::AND-ELIM))
+ :STRUCTURES
+ (
+(:CONCLUSION 0 :PREMISES NIL)
+(:CONCLUSION 1 :PREMISES NIL)
+(:CONCLUSION 2 :PREMISES NIL)
+(:CONCLUSION 3 :PREMISES (2))
+(:CONCLUSION 4 :PREMISES NIL)
+(:CONCLUSION 5 :PREMISES (4))
+(:CONCLUSION 6 :PREMISES NIL)
+(:CONCLUSION 7 :PREMISES NIL)
+(:CONCLUSION 8 :PREMISES (7))
+(:CONCLUSION 9 :PREMISES NIL)
+(:CONCLUSION 10 :PREMISES (9))
+(:CONCLUSION 11 :PREMISES NIL)
+(:CONCLUSION 13 :PREMISES (18 19))
+(:CONCLUSION 14 :PREMISES (1 10 13 8))
+(:CONCLUSION 15 :PREMISES (0 3 5 14))
+(:CONCLUSION 16 :PREMISES NIL)
+(:CONCLUSION 17 :PREMISES (11 6 16))
+(:CONCLUSION 18 :PREMISES (17))
+(:CONCLUSION 19 :PREMISES (17)))
+ :INTERFACE
+ (:X
+  -10
+  :Y
+  0
+  :WIDTH
+  1540
+  :HEIGHT
+  1000
+  :PROOF-SYSTEM
+  LOGIC::PROPOSITIONAL-CALCULUS))
