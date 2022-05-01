@@ -20,3 +20,7 @@ as of 4/21/2022.
 4. The input BRAM file proof from Aris should have only one conclusion.
 5. The input BRAM file proof from Aris should not have useless steps, which means that except for the conclusion, 
 every other step should have steps followed by them.
+
+Code Requirements:
+
+Python 3.9
